@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map'
 export class productService {
   private _albumUrl='../asset/album.json';
   constructor(private _http: Http) { }
-
+  albumUrl;
 
   getAlbum(id: number){
     return this._http.get(this._albumUrl).map((response)=>response.album.json());
