@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {productService } from '../product.service';
+import {ProductService } from '../product.service';
 @Component({
   selector: 'app-product-description',
   templateUrl: './product-description.component.html',
@@ -9,10 +9,10 @@ export class ProductDescriptionComponent implements OnInit {
 
   albumInfo;
   productService: any;
-  constructor(_private_ProductService: productService) { }
+  constructor(private_productService: ProductService) { }
 
   ngOnInit() {
-    this.productService.getAlbum(1).subscribe(response=> this.albumInfo= response);
+    this._productService.getAlbum(1).subscribe(response=> this.albumInfo= response);
   }
 
 }
