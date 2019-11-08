@@ -3,6 +3,7 @@ import { Http,Response } from '@angular/http';
 import 'rxjs/add/operator/map'
 
 
+
 @Injectable()
 export class productService {
   private _albumUrl='../asset/album.json';
@@ -10,6 +11,7 @@ export class productService {
 
 
   getAlbum(id: number){
+    
     return this._http.get(this._albumUrl).map((response)=>response.json());
 
   }
