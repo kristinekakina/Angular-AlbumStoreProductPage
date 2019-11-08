@@ -5,7 +5,6 @@ import 'rxjs/add/operator/map'
 
 @Injectable()
 export class productService {
-  [x: string]: any;
   private_albumUrl='../asset/album.json';
   constructor(private_http: Http) { }
 
